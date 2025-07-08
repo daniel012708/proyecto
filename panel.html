@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="EstilosPanel.css">
+    <style>
+                
+                .card {
+            background-color: #f9f9f9; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: blue; 
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="#" alt="Gafra Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="title-section">
+            <h1>Administrador</h1>
+            <span>gestiona tus servicios</span>
+        </div>
+        <div class="container">
+            <div class="card">
+                <h2>Usuarios</h2>
+                <p>Consulta tus servicios de Usuarios</p>
+                <a href="panelusuarios.html" class="btn">Ir a Usuarios</a> <!-- Cambia la URL según tu archivo -->
+            </div>
+            <div class="card">
+                <h2>Productos</h2>
+                <p>Consulta tus Productos</p>
+                <a href="panelproductos.html" class="btn">Ir a Productos</a> <!-- Cambia la URL según tu archivo -->
+            </div>
+            <div class="card">
+                <h2>Pre-Orden</h2>
+                <p>Consulta tus Pre-Ordenes</p>
+                <a href="panelpreorden.html" class="btn">Ir a Pre-Orden</a> <!-- Cambia la URL según tu archivo -->
+            </div>
+            <div class="card">
+                <h2>Ventas</h2>
+                <p>Consulta las ventas realizadas</p>
+                <a href="panelventas.html" class="btn">Ir a Ventas</a> <!-- Cambia la URL según tu archivo -->
+            </div>
+        </div>
+    </main>
+</body>
+</html>

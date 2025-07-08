@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-image: url('https://i.pinimg.com/564x/ac/89/21/ac89213d4dcbf93d7c3458e18560d2a9.jpg');
+            display: inline;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: 100px;
+            background-position: center;
+            background-color: #f8f9fa;
+            margin: 0;
+        }
+        
+        .tipoU {
+            display: none;
+        }
+        
+        .container {
+            width: 500px;
+            padding: 30px;
+            border: 1px solid #ced4da;
+            border-radius: 25px;
+            background-color: rgba(255, 255, 255, 0.336);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.788);
+            backdrop-filter: blur(15px);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .login-header {
+            display: flex;
+            justify-content: center;  
+            align-items: center;     
+            margin-bottom: 20px;      
+        }
+
+        .login-header img {
+            max-width: 100px;         
+            height: auto;          
+        }
+        
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            font-weight: 400;
+        }
+        
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 12px 183px;
+            border-radius: 30px;
+            font-weight: bold;
+            color: white;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0056b3;
+            /* Color más oscuro al pasar el mouse */
+            transform: translateY(-2px);
+            /* Efecto de elevación */
+        }
+        .TipoU{
+            display: none;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+                /* Mueve el contenedor hacia arriba */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+                /* Regresa a la posición original */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="login-header">
+            <img src="https://cdn.leonardo.ai/users/87ff1cbb-7254-440f-8795-cf874b32b261/generations/a89b178e-c65c-4e5b-96c2-4f5ae900d0bd/Leonardo_Phoenix_Design_a_modern_and_sleek_logo_for_GAFRA_a_co_0.jpg?w=512" alt="gafra logo">
+        </div>
+        <h2>Registro de cliente</h2>
+        <form action="proyectoC.php" method="POST">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" placeholder="Ingrese su nombre completo" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <div class="tipoU">
+                <label for="tipo_usuario" class="form-label">Tipo de Usuario</label>
+                <select class="form-control" id="tipo_usuario" name="tipo_usuario" required>
+                    <option value="cliente" selected>cliente</option>
+                </select>
+            </div>
+            </div>
+            <div class="mb-3">
+                <label for="nom_usuario" class="form-label">Nombre de Usuario</label>
+                <input type="text" placeholder="Ingrese un nombre de usuario" class="form-control" id="nom_usuario" name="nom_usuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="contrasena" class="form-label">Contraseña</label>
+                <input type="password" placeholder="Digite una contraseña segura" class="form-control" id="contrasena" name="contrasena" required>
+            </div>
+            <div class="mb-3">
+                <label for="correo_electronico" class="form-label">Correo Electrónico</label>
+                <input type="email" placeholder="Ingresa una direccion de correo valida" class="form-control" id="correo_electronico" name="correo_electronico" required>
+            </div>
+            <div class="mb-3">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" placeholder="Ingrese su direccion de residencia" class="form-control" id="direccion" name="direccion" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="number" placeholder="Digite su numero de telefono" class="form-control" id="telefono" name="telefono" required min="100000000" max="9999999999">
+            </div>
+            <div class="mb-3">
+                <label for="documento_identidad" class="form-label">Documento de Identidad</label>
+                <input type="number" placeholder="Digite su documento" class="form-control" id="documento_identidad" name="documento_identidad" required min="10000000" max="99999999999">
+            </div>
+            <div class="mb-3">
+                <label for="eps" class="form-label">EPS</label>
+                <input type="text" placeholder="Ingrese " class="form-control" id="eps" name="eps" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipo_sangre" class="form-label">Tipo de Sangre</label>
+                <select class="form-control" id="tipo_sangre" name="tipo_sangre" required>
+                    <option value="O">O</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="RH" class="form-label">RH</label>
+                <select class="form-control" id="RH" name="RH" required>
+                    <option value="+">Positivo</option>
+                    <option value="-">Negativo</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="estado_civil" class="form-label">Estado Civil</label>
+                <select class="form-control" id="estado_civil" name="estado_civil" required>
+                    <option value="soltero">Soltero</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viudo">Viudo</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary"> Registrar</a></button>
+        </form>
+    </div>
+</body>
+
+</html>

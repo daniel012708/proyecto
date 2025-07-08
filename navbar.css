@@ -1,0 +1,103 @@
+body {
+    background-color: #f4f7fa;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #1746A2;
+    padding: 0px 25px 0 0;
+}
+
+.navbar .logo img {
+    height: 100px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ddd !important;
+}
+
+.title-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #1746A2;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    flex: 0 1 calc(25% - 20px);
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: #1746A2;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.btn {
+    color: white;
+    background-color: #1746A2;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #143d82;
+    transform: translateY(-2px);
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+
+.navbar-brand {
+    padding-top: 0;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        flex: 0 1 calc(100% - 20px);
+    }
+}
